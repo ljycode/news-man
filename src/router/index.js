@@ -8,6 +8,7 @@ import Add from '@/views/Add.vue'
 Vue.use(Router)
 
 export default new Router({
+  linkActiveClass: 'active',
   routes: [
     {
       path: '/',

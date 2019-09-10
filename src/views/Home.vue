@@ -3,8 +3,8 @@
         <!-- 子路由显示区 -->
         <router-view />
         <ul class="footer">
-            <li><router-link :to="{name: 'list'}">新闻列表</router-link></li>
-            <li><router-link :to="{name: 'user'}">个人中心</router-link></li>
+            <li class="icons"><router-link :to="{name: 'list'}">新闻列表</router-link></li>
+            <li class="icons"><router-link :to="{name: 'user'}">个人中心</router-link></li>
         </ul>
     </div>
 </template>
@@ -26,5 +26,22 @@
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-around;
+}
+ul>li{
+    list-style: none;
+}
+.icons{
+    font-size:16px;
+    flex:1;
+    text-align:center;
+    border-top:1px solid #ddd;
+    a{
+        display: block;
+        color:blue;
+        &.active{
+            color:#fff;
+            background:blue;
+        }
+    }
 }
 </style>
